@@ -1,0 +1,24 @@
+name: flutter_boost_android_example
+description: Demonstrates Android platform-specific features of flutter_boost.
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.12.0 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.5
+  webview_flutter: ^3.0.4
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_boost:
+    path: ../../
+  flutter_boost_android:
+    path: ../
+
+flutter:
+  uses-material-design: true

@@ -11,8 +11,6 @@ import 'case/hero_animation.dart';
 import 'case/image_cache_route.dart';
 import 'case/image_pick.dart';
 import 'case/media_query.dart';
-import 'case/native_view_demo.dart';
-import 'case/platform_view_perf.dart';
 import 'case/popUntil.dart';
 import 'case/pushreplace.dart';
 import 'case/radial_hero_animation.dart';
@@ -20,11 +18,9 @@ import 'case/return_data.dart';
 import 'case/rotation_transition.dart';
 import 'case/selection_screen.dart';
 import 'case/show_dialog_demo.dart';
-import 'case/simple_webview_demo.dart';
 import 'case/state_restoration.dart';
 import 'case/system_ui_overlay_style.dart';
 import 'case/transparent_widget.dart';
-import 'case/webview_flutter_demo.dart';
 import 'case/willpop.dart';
 import 'flutter_page.dart';
 import 'simple_page_widgets.dart';
@@ -254,11 +250,6 @@ class _MyAppState extends State<MyApp> {
           settings: settings,
           pageBuilder: (_, __, ___) => SecondStatefulRouteWidget());
     },
-    'platformView': (settings, uniqueId) {
-      return PageRouteBuilder<dynamic>(
-          settings: settings,
-          pageBuilder: (_, __, ___) => PlatformRouteWidget());
-    },
     'popUntilView': (settings, uniqueId) {
       return PageRouteBuilder<dynamic>(
           settings: settings, pageBuilder: (_, __, ___) => PopUntilRoute());
@@ -335,22 +326,6 @@ class _MyAppState extends State<MyApp> {
     'f2f_second': (settings, uniqueId) {
       return PageRouteBuilder<dynamic>(
           settings: settings, pageBuilder: (_, __, ___) => F2FSecondPage());
-    },
-    'webview': (settings, uniqueId) {
-      return PageRouteBuilder<dynamic>(
-          settings: settings, pageBuilder: (_, __, ___) => WebViewExample());
-    },
-    'platformview/listview': (settings, uniqueId) {
-      return PageRouteBuilder<dynamic>(
-          settings: settings, pageBuilder: (_, __, ___) => PlatformViewPerf());
-    },
-    'platformview/animation': (settings, uniqueId) {
-      return PageRouteBuilder<dynamic>(
-          settings: settings, pageBuilder: (_, __, ___) => NativeViewExample());
-    },
-    'platformview/simplewebview': (settings, uniqueId) {
-      return PageRouteBuilder<dynamic>(
-          settings: settings, pageBuilder: (_, __, ___) => SimpleWebView());
     },
     'state_restoration': (settings, uniqueId) {
       return PageRouteBuilder<dynamic>(
