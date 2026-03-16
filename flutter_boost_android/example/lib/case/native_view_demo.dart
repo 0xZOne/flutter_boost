@@ -1,8 +1,8 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_boost/flutter_boost.dart';
-import 'package:flutter_boost_example/case/animation_demo.dart';
-import 'package:flutter_boost_example/case/native_view.dart';
+import 'package:flutter_boost_android_example/case/animation_demo.dart';
+import 'package:flutter_boost_android_example/case/native_view.dart';
 
 class NativeViewExample extends StatefulWidget {
   @override

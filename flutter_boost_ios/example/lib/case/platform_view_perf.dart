@@ -1,9 +1,7 @@
-import 'dart:io' show Platform;
-
 import 'package:flutter/material.dart';
 import 'package:flutter_boost/flutter_boost.dart';
 import 'package:webview_flutter/webview_flutter.dart';
-import 'package:flutter_boost_example/case/native_view.dart';
+import 'package:flutter_boost_ios_example/case/native_view.dart';
 
 class PlatformViewPerf extends StatefulWidget {
   @override
@@ -19,10 +17,6 @@ class PlatformViewPerfState extends State<PlatformViewPerf> {
   @override
   void initState() {
     super.initState();
-    if (usingHybridComposition) {
-      // Enable hybrid composition.
-      if (Platform.isAndroid) WebView.platform = SurfaceAndroidWebView();
-    }
   }
 
   @override

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_boost_example/case/platform_view.dart';
 import 'package:flutter_boost/flutter_boost.dart';
 
 class FirstRouteWidget extends StatefulWidget {
@@ -261,25 +260,3 @@ class TabRouteWidget extends StatelessWidget {
   }
 }
 
-class PlatformRouteWidget extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text("Platform Route"),
-      ),
-      body: Center(
-        child: ElevatedButton(
-          child: const TextView(),
-          onPressed: () {
-            debugPrint("open second page!");
-            // FlutterBoost.singleton.open("second").then((Map<dynamic,dynamic> value) {
-            //   debugPrint(
-            //       "call me when page is finished. did receive second route result $value");
-            // });
-          },
-        ),
-      ),
-    );
-  }
-}

@@ -2,16 +2,17 @@
 // Use of this source code is governed by a MIT license that can be
 // found in the LICENSE file.
 
+import 'package:flutter_boost_platform_interface/flutter_boost_platform_interface.dart';
+
 import 'boost_operation_queue.dart';
 import 'flutter_boost_app.dart';
-import 'messages.dart';
 
 /// The MessageChannel counterpart on the Dart side.
 class BoostFlutterRouterApi extends FlutterRouterApi {
   factory BoostFlutterRouterApi(FlutterBoostAppState appState) {
     if (_instance == null) {
       _instance = BoostFlutterRouterApi._(appState);
-      FlutterRouterApi.setup(_instance);
+      FlutterBoostPlatform.instance.setupFlutterRouterApi(_instance!);
     }
     return _instance!;
   }

@@ -1,8 +1,6 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter_boost/flutter_boost.dart';
-import 'package:flutter_boost_example/case/native_view.dart';
-
 /// For translucent dialog demo
 class TransparentWidget extends StatefulWidget {
   @override
@@ -32,11 +30,14 @@ class TransparentWidgetState extends State<TransparentWidget> {
             child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Expanded(
+                  const Expanded(
                     flex: 1,
                     child: SizedBox(
                       height: 90,
-                      child: NativeView('<simple-text-view>', false),
+                      child: Center(
+                        child: Text('Transparent Dialog Demo',
+                            style: TextStyle(fontSize: 18)),
+                      ),
                     ),
                   ),
                   Expanded(
