@@ -3,10 +3,10 @@
 // found in the LICENSE file.
 
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_boost_platform_interface/flutter_boost_platform_interface.dart';
 
 import 'container_overlay.dart';
 import 'flutter_boost_app.dart';
-import 'messages.dart';
 
 typedef EventListener = Future<dynamic> Function(String key, Map arguments);
 
@@ -46,7 +46,7 @@ class BoostChannel {
     var params = CommonParams()
       ..key = key
       ..arguments = args;
-    _appState!.nativeRouterApi.sendEventToNative(params);
+    FlutterBoostPlatform.instance.sendEventToNative(params);
   }
 
   /// enable iOS native pop gesture for container matching [containerId]

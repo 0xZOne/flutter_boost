@@ -4,6 +4,15 @@
 
 library flutter_boost;
 
+export 'package:flutter_boost_platform_interface/flutter_boost_platform_interface.dart'
+    show
+        FlutterBoostPlatform,
+        CommonParams,
+        StackInfo,
+        FlutterContainer,
+        FlutterPage,
+        FlutterRouterApi;
+
 export 'src/boost_channel.dart';
 export 'src/boost_container.dart';
 export 'src/boost_flutter_binding.dart';

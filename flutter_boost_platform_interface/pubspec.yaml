@@ -1,0 +1,18 @@
+name: flutter_boost_platform_interface
+description: A common platform interface for the flutter_boost plugin.
+version: 5.0.2
+
+homepage: https://github.com/alibaba/flutter_boost
+
+environment:
+  sdk: ">=3.2.0 <4.0.0"
+  flutter: ">=3.16.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  plugin_platform_interface: ^2.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter

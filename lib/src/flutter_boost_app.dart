@@ -8,6 +8,8 @@ import 'package:collection/collection.dart' show IterableExtension;
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
+import 'package:flutter_boost_platform_interface/flutter_boost_platform_interface.dart';
+
 import 'boost_channel.dart';
 import 'boost_container.dart';
 import 'boost_flutter_binding.dart';
@@ -18,7 +20,6 @@ import 'boost_navigator.dart';
 import 'boost_operation_queue.dart';
 import 'container_overlay.dart';
 import 'logger.dart';
-import 'messages.dart';
 
 typedef FlutterBoostAppBuilder = Widget Function(Widget home);
 
@@ -70,8 +71,8 @@ class FlutterBoostAppState extends State<FlutterBoostApp> {
   BoostContainer? get topContainer =>
       _containers.isNotEmpty ? _containers.last : null;
 
-  NativeRouterApi get nativeRouterApi => _nativeRouterApi;
-  late NativeRouterApi _nativeRouterApi;
+  FlutterBoostPlatform get nativeRouterApi => _platform;
+  FlutterBoostPlatform get _platform => FlutterBoostPlatform.instance;
 
   BoostFlutterRouterApi get boostFlutterRouterApi => _boostFlutterRouterApi;
   late BoostFlutterRouterApi _boostFlutterRouterApi;
@@ -90,7 +91,6 @@ class FlutterBoostAppState extends State<FlutterBoostApp> {
         BoostFlutterBinding.instance != null,
         'BoostFlutterBinding is not initialized，'
         'please refer to "class CustomFlutterBinding" in example project');
-    _nativeRouterApi = NativeRouterApi();
     _boostFlutterRouterApi = BoostFlutterRouterApi(this);
 
     /// create the container matching the initial route
@@ -554,7 +554,7 @@ class FlutterBoostAppState extends State<FlutterBoostApp> {
         ..pageName = container.pageInfo.pageName
         ..uniqueId = container.pageInfo.uniqueId
         ..arguments = container.pageInfo.arguments;
-      return await _nativeRouterApi.popRoute(params);
+      return await _platform.popRoute(params);
     }
   }
 
