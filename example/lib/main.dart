@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_boost/flutter_boost.dart';
 
 import 'case/asset_image_route.dart';
-import 'case/bottom_navigation_bar_demo.dart';
 import 'case/counter_demo.dart';
 import 'case/dual_screen.dart';
 import 'case/flutter_rebuild_demo.dart';
@@ -335,11 +334,6 @@ class _MyAppState extends State<MyApp> {
     'rotation_transition': (settings, uniqueId) {
       return PageRouteBuilder<dynamic>(
           settings: settings, pageBuilder: (_, __, ___) => RotationTranDemo());
-    },
-    'bottom_navigation': (settings, uniqueId) {
-      return PageRouteBuilder<dynamic>(
-          settings: settings,
-          pageBuilder: (_, __, ___) => const BottomNavigationPage());
     },
     'system_ui_overlay_style': (settings, uniqueId) {
       return PageRouteBuilder<dynamic>(

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_boost/flutter_boost.dart';
 
+import 'case/bottom_navigation_bar_demo.dart';
 import 'case/native_view_demo.dart';
 import 'case/platform_view.dart';
 import 'case/platform_view_perf.dart';
@@ -65,7 +66,15 @@ class _MyAppState extends State<MyApp> {
     'platformView': (settings, uniqueId) {
       return PageRouteBuilder<dynamic>(
           settings: settings,
-          pageBuilder: (_, __, ___) => PlatformRouteWidget());
+          pageBuilder: (_, __, ___) => Scaffold(
+                appBar: AppBar(title: const Text('Platform Route')),
+                body: const Center(child: TextView()),
+              ));
+    },
+    'bottom_navigation': (settings, uniqueId) {
+      return PageRouteBuilder<dynamic>(
+          settings: settings,
+          pageBuilder: (_, __, ___) => const BottomNavigationPage());
     },
     'platformview/animation': (settings, uniqueId) {
       return PageRouteBuilder<dynamic>(
